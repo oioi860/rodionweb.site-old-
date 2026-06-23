@@ -1,0 +1,1 @@
+<?php return '$2y$12$QO2kHIMBmrC9DjKgkBdtSe0ZDWIgdNsZhm9iZRnXn6NR4ycBQB7Me';

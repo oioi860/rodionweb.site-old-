@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "gallery_1",
+      "images": ["assets/gallery/1.webp", "assets/gallery/2.webp"],
+      "caption": "Фундамент",
+      "description": "Закладка надёжного основания для вашего будущего дома. Используем только качественные материалы и соблюдаем все строительные нормы."
+    },
+    {
+      "id": "gallery_2",
+      "images": ["assets/gallery/3.webp", "assets/gallery/4.webp", "assets/gallery/5.webp"],
+      "caption": "Подготовка бревна",
+      "description": "Ручной отбор и подготовка каждого бревна. Мастера внимательно проверяют качество древесины перед началом работ."
+    },
+    {
+      "id": "gallery_3",
+      "images": ["assets/gallery/6.webp", "assets/gallery/7.webp"],
+      "caption": "Рубка сруба",
+      "description": "Ручная рубка сруба по традиционным технологиям. Каждое соединение подгоняется вручную с высокой точностью."
+    }
+  ]
+}

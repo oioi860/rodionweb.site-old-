@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги | Берлога</title>
+  <meta name="description" content="Услуги строительной компании Берлога">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Monomakh&display=swap" rel="stylesheet">
+  <script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('img').forEach(function(i){i.setAttribute('draggable','false')})});document.addEventListener('contextmenu',function(e){if(e.target.closest('img,figure,picture,[class*="card-img"],[class*="slider"]')){e.preventDefault();e.stopPropagation();return false}},true);document.querySelectorAll('img,[class*="card-img"]').forEach(function(el){el.addEventListener('contextmenu',function(e){e.preventDefault();return false})});</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="flex items-center">
+  <img src="assets/images/logo.png" alt="Берлога" class="h-20 w-auto">
+</a>
+    <a href="tel:+79991234567" class="header-phone-mobile" data-phone>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="projects.html">Проекты</a>
+      <a href="services.html">Услуги</a>
+      <a href="about.html">О нас</a>
+      
+      <a href="gallery.html">Галерея работ</a>
+      <a href="contacts.html">Контакты</a>
+      <div class="nav-right">
+        <a href="tel:+79991234567" class="header-phone" data-phone>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (965) 882-50-06
+        </a>
+        <a href="index.html#calculator" class="btn btn-gold btn-sm">Рассчитать стоимость</a>
+      </div>
+    </nav>
+    <button class="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="service-container">
+
+  <div class="service-hero fade-in-up" id="service-hero-block">
+    <div style="max-width:1200px;margin:0 auto;text-align:center;">
+      <h1 id="service-title-hero" style="font-size:2rem;font-weight:700;margin-bottom:12px;letter-spacing:0.04em;"></h1>
+      <p id="service-desc-hero" style="color:var(--text-secondary);max-width:600px;margin:0 auto 24px;"></p>
+      <a href="index.html#calculator" class="btn btn-gold">Рассчитать стоимость</a>
+    </div>
+  </div>
+
+  <div class="fade-in-up" style="max-width:1200px;margin:0 auto;padding:40px 20px;">
+    <div class="service-content">
+      <div>
+        <p id="service-text" style="margin-bottom:16px;"></p>
+        <p id="service-price" style="font-weight:600;"></p>
+      </div>
+      <div>
+        <img id="service-image" src="" alt="" style="width:100%;border-radius:8px;border:1px solid var(--border);">
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-white fade-in-up">
+    <h2 class="section-title fade-in-left">Преимущества</h2>
+    <div class="advantage-grid" id="service-advantages"></div>
+  </section>
+
+  <section class="section fade-in-up" id="service-projects-section" style="display:none;">
+    <h2 class="section-title fade-in-left">Наши проекты</h2>
+    <p class="section-subtitle">Посмотрите примеры наших работ по этой услуге</p>
+    <div class="card-grid" id="service-projects-grid"></div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="projects.html" class="btn btn-outline">Все проекты</a>
+    </div>
+  </section>
+
+  <section class="section section-white fade-in-up" id="calculator">
+    <h2 class="section-title fade-in-left">Рассчитайте стоимость</h2>
+    <div class="calculator">
+      <form id="calc-form">
+        <div class="calc-row">
+          <label for="calc-service">Тип строения</label>
+          <select id="calc-service">
+            <option value="">Выберите тип</option>
+          </select>
+        </div>
+        <div class="calc-row">
+          <label for="calc-area">Площадь, м²</label>
+        <input type="number" id="calc-area" placeholder="Введите площадь" min="1">
+      </div>
+      <button type="submit" class="btn btn-gold calc-btn" style="width:100%;">Рассчитать</button>
+      <div id="calc-error" class="calc-error"></div>
+      <div id="calc-result" class="calc-result" style="display:none;">
+        <p style="margin-bottom:4px;font-size:0.9rem;color:var(--text-secondary);">Ориентировочная стоимость:</p>
+        <div class="price" id="calc-price">0 ₽</div>
+        <a href="#feedback" class="btn btn-outline" style="margin-top:16px;">Оставить заявку на точный расчёт</a>
+      </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section fade-in-up">
+    <h2 class="section-title fade-in-left">Оставить заявку</h2>
+    <div style="max-width:600px;margin:0 auto;">
+      <form id="feedback" class="ajax-form">
+        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-status"></div>
+        <div class="form-group">
+          <label for="service-name">Имя</label>
+          <input type="text" id="service-name" name="name" placeholder="Ваше имя">
+        </div>
+        <div class="form-group">
+          <label for="service-phone">Телефон</label>
+          <input type="tel" id="service-phone" name="phone" placeholder="+7 (999) 123-45-67">
+        </div>
+        <div class="form-group">
+          <label for="service-msg">Сообщение</label>
+          <textarea id="service-msg" name="message" placeholder="Ваше сообщение"></textarea>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="privacy-serv-feedback" name="privacy" required>
+          <label for="privacy-serv-feedback">Я согласен на обработку персональных данных в соответствии с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a></label>
+        </div>
+        <button type="submit" class="btn btn-solid" style="width:100%;">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3 data-company>Берлога</h3>
+      <p>Строим дома и бани из сосны и кедра по всей России. Под ключ, от проекта до ввода в эксплуатацию.</p>
+    </div>
+    <div class="footer-nav-col">
+      <h3>Навигация</h3>
+      <div class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="projects.html">Проекты</a>
+        <a href="gallery.html">Галерея работ</a>
+        <a href="service.html?id=doma">Строительство домов</a>
+        <a href="service.html?id=bani">Строительство бань</a>
+        <a href="service.html?id=proektirovanie">Проектирование</a>
+        <a href="about.html">О нас</a>
+        
+        <a href="contacts.html">Контакты</a>
+      </div>
+    </div>
+    <div class="footer-contacts">
+      <h3>Свяжитесь с нами</h3>
+      <a href="tel:+79991234567" class="footer-phone" data-phone>+7 (999) 123-45-67</a>
+      <p class="footer-email" data-email>info@berlogadom.ru</p>
+      <p class="footer-address" data-address>г. Москва, ул. Лесная, д. 1</p>
+      <div class="footer-social">
+        <a href="#" class="social-vk">VK</a>
+        <a href="#" class="social-tg">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span>© 2025 Берлога. Все права защищены.</span>
+      <a href="privacy.html" class="footer-privacy">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/service.js"></script>
+</body>
+</html>

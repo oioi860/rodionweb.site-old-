@@ -1,0 +1,5 @@
+# Добавляем MIME-тип для PDF-файлов
+AddType application/pdf .pdf
+
+# Включаем FollowSymLinks (это может потребоваться)
+Options +FollowSymLinks

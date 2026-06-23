@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Бюро Талантов | Кадровое агентство</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+
+        <div class="logo">
+            <a href="index.html">
+                <div class="logo-css">
+                    <span class="logo-circle"></span>
+                    <span class="logo-b">B</span>
+                    <span class="logo-line1">ureau</span>
+                    <span class="logo-line2">of</span>
+                    <span class="logo-line3">Talents</span>
+                </div>
+            </a>
+        </div>
+
+        <nav class="desktop-nav">
+            <a href="../index.html">← К портфолио</a>
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#contact-form">Консультация</a>
+        </nav>
+
+        <a href="#contact-form" class="btn-primary header-btn">
+            Связаться
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../index.html">← К портфолио</a>
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#contact-form">Консультация</a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero-center">
+        <div class="container">
+            <h2>Соединяем компании с лучшими специалистами<br> и оптимизируем HR-процессы</h2>
+            <p>Стратегический подход, честность и результат. Ваш надёжный партнёр в мире талантов.</p>
+            <div class="hero-button-wrapper">
+                <a href="#about" class="btn-outline">Узнать больше</a>
+                <button class="btn-primary" onclick="openGuideModal()">Скачать гайд →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="bg-about">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 64px;">
+                <span class="lead-magnet-badge" style="margin-bottom: 24px;">8 лет экспертизы</span>
+                <h2 class="section-title" style="max-width: 800px; margin: 0 auto 24px; border-bottom: none;">Bureau of Talents — не просто подбор, а ваше личное бюро решений.</h2>
+                <p style="font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; line-height: 1.6;">У вашего бизнеса есть миссия. Наша — помочь её достичь. Профессионально. Надёжно. Честно.</p>
+            </div>
+            <div class="about-stats-grid">
+                <div class="about-stat-item">
+                    <div class="about-stat-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Точечный подход</h3>
+                    <p>Ищем не просто кандидата, а носителя вашей культуры, ценностей и знаний.</p>
+                </div>
+                <div class="about-stat-item">
+                    <div class="about-stat-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Прозрачность и данные</h3>
+                    <p>Полная отчётность на каждом этапе: от брифинга до оффера и выхода на работу.</p>
+                </div>
+                <div class="about-stat-item">
+                    <div class="about-stat-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Долгосрочное партнёрство</h3>
+                    <p>Сопровождаем клиентов годами, экономим до 40% бюджета на найм за счёт качества.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="#contact-form" class="btn-primary">Обсудить ваш проект</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond"></span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- Бюро в цифрах -->
+    <section class="bg-stats">
+        <div class="container">
+            <h2 class="section-title">Бюро в цифрах</h2>
+            <div class="stats-grid">
+                <div class="stat-item"><div class="stat-number">8</div><p>лет экспертизы</p></div>
+                <div class="stat-item"><div class="stat-number">993</div><p>закрытых позиций</p></div>
+                <div class="stat-item"><div class="stat-number">98%</div><p>успешных прохождений испытательного срока</p></div>
+                <div class="stat-item"><div class="stat-number">10</div><p>средних дней закрытия вакансии</p></div>
+                <div class="stat-item"><div class="stat-number">100%</div><p>конфиденциальность</p></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider-dots">
+        <span class="dot-divider"></span>
+        <span class="dot-divider"></span>
+        <span class="dot-divider"></span>
+    </div>
+
+    <!-- Спектр услуг -->
+    <section id="services" class="bg-services">
+        <div class="container">
+            <h2 class="section-title">Наш спектр услуг</h2>
+            <div class="cards-grid">
+                <a href="service-sniping.html" class="service-card">
+                    <div class="service-card-img"><img src="assets/service-sniping.jfif" alt="Точечный снайпинг"></div>
+                    <h3>Точечный снайпинг</h3>
+                    <p>Находим ровно того специалиста, который станет носителем вашей культуры, ценностей и знаний.</p>
+                    <span class="service-card-link">Узнать подробнее →</span>
+                </a>
+                <a href="service-hraudit.html" class="service-card">
+                    <div class="service-card-img"><img src="assets/service-hraudit.jfif" alt="HR-аудит"></div>
+                    <h3>HR-аудит</h3>
+                    <p>Оптимизируем подбор, оценку и адаптацию. Чтобы вы забыли про текучку и командно брали новые вершины.</p>
+                    <span class="service-card-link">Узнать подробнее →</span>
+                </a>
+                <a href="service-consult.html" class="service-card">
+                    <div class="service-card-img"><img src="assets/service-consult.jfif" alt="Консультация"></div>
+                    <h3>Консультация</h3>
+                    <p>Когда всё вроде стабильно, но бизнес буксует. Находим невидимый тормоз в процессах.</p>
+                    <span class="service-card-link">Узнать подробнее →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond"></span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- Премиум-блок "Вам точно к нам" -->
+    <section class="bg-premium">
+        <div class="container">
+            <div class="premium-compare">
+                <div class="premium-card">
+                    <h3>Вам точно к нам, если вы узнали себя:</h3>
+                    <ul class="premium-list">
+                        <li>Вроде все HR-процессы есть, но найм всё равно «как повезёт».</li>
+                        <li>Нужен один редкий спец, а воронка откликов даёт сотни «мимо».</li>
+                        <li>Чувствуете: в команде что-то не так, но цифры не показывают причину.</li>
+                    </ul>
+                </div>
+                <div class="premium-card">
+                    <h3>Мы не подбираем «кого-то похожего». Мы:</h3>
+                    <ul class="premium-list">
+                        <li>Находим адептов ваших идей</li>
+                        <li>Собираем пазл, где каждый элемент усиливает друг друга</li>
+                        <li>Консультируем, когда «всё нормально», но бизнес буксует</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider-dots">
+        <span class="dot-divider"></span>
+        <span class="dot-divider"></span>
+        <span class="dot-divider"></span>
+    </div>
+
+    <!-- ЛИД-МАГНИТ (гайд, вставка) -->
+    <section class="bg-guide">
+        <div class="container">
+            <div class="lead-magnet-inline">
+                <div class="lead-magnet-inline-content">
+                    <span class="lead-magnet-badge">Бесплатный гайд</span>
+                    <h3>«Как написать вакансию, которая нанимает без вас»</h3>
+                    <p>10 шагов, примеры «было/стало», чек-лист для проверки — всё, чтобы ваша вакансия привлекала лучших даже когда вы спите.</p>
+                    <button class="btn-primary" onclick="openGuideModal()">Забрать гайд →</button>
+                </div>
+                <div class="lead-magnet-inline-visual">
+                    <div class="lead-magnet-pdf-icon">
+                        <span class="pdf-icon-big">📄</span>
+                        <span class="pdf-label">PDF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond"></span>
+        <span class="divider-line"></span>
+    </div>
+
+<section class="executive-note">
+
+    <div class="container">
+
+        <p>
+            Мы не работаем по принципу
+            «отправим десяток резюме и посмотрим».
+        </p>
+
+        <h2>
+            Каждый проект начинается с понимания
+            бизнеса, команды и точки роста компании.
+        </h2>
+
+    </div>
+
+</section>
+
+    <!-- Ключевые результаты -->
+    <section class="bg-cases">
+        <div class="container">
+            <h2 class="section-title">Ключевые результаты</h2>
+            <div class="cards-grid">
+                <div class="case-card">
+                    <div class="case-card-img"><img src="assets/case-digital.jfif" alt="Крупный холдинг цифровых товаров"></div>
+                    <h3>Крупный холдинг цифровых товаров</h3>
+                    <div class="case-details">
+                        <div class="case-field"><span class="case-label">Позиция</span><span class="case-value">Директор по стратегическому развитию</span></div>
+                        <div class="case-field"><span class="case-label">Сложность</span><span class="case-value">Ограниченный рынок кандидатов в игровом e-com</span></div>
+                        <div class="case-field"><span class="case-label">Решение</span><span class="case-value">Снайпинг на международном рынке</span></div>
+                    </div>
+                    <div class="case-result">
+                        <span class="case-result-label">Результат</span>
+                        <span class="case-result-value">Специалист увеличил эффективность подразделений на +32% и вывел компанию на 4+ зарубежных рынка</span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img"><img src="assets/case-it-startu.jfif" alt="IT-стартап"></div>
+                    <h3>IT-стартап</h3>
+                    <div class="case-details">
+                        <div class="case-field"><span class="case-label">Позиция</span><span class="case-value">DevOps-инженер</span></div>
+                        <div class="case-field"><span class="case-label">Задача</span><span class="case-value">Инфраструктуры не было, релизы падали</span></div>
+                        <div class="case-field"><span class="case-label">Решение</span><span class="case-value">Нашли специалиста, который отвечал критериям компании</span></div>
+                    </div>
+                    <div class="case-result">
+                        <span class="case-result-label">Результат</span>
+                        <span class="case-result-value">Выстроил CI/CD с нуля, сократил время развертывания среды с 3 дней до 1 дня, релизы перестали «гореть» по ночам </span>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-card-img"><img src="assets/case-construction.jfif" alt="Строительная компания"></div>
+                    <h3>Строительная компания</h3>
+                    <div class="case-details">
+                        <div class="case-field"><span class="case-label">Услуга</span><span class="case-value">HR-аудит</span></div>
+                        <div class="case-field"><span class="case-label">Выявили</span><span class="case-value">Корневую причину низкой вовлеченности</span></div>
+                    </div>
+                    <div class="case-result">
+                        <span class="case-result-label">Результаты</span>
+                        <span class="case-result-value">Вовлеченность выросла с 17% до 30%, отток специалистов снизился на 22%, экономия на найме 2,4 млн ₽/год</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider-dots">
+        <span class="dot-divider"></span>
+        <span class="dot-divider"></span>
+        <span class="dot-divider"></span>
+    </div>
+
+    <!-- Отзывы -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="reviews-carousel">
+                <button class="carousel-btn carousel-prev">←</button>
+                <div class="reviews-container">
+                    <div class="reviews-wrapper">
+                        <div class="review-slide">
+                            <div style="background: white; border-radius: 32px; padding: 40px; border: 1px solid #e8e5df;">
+                                <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 24px;">
+                                    <div style="width: 60px; height: 60px; background: #7E94BF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">АК</div>
+                                    <div><div style="font-weight: 700; font-size: 1.2rem;">Анна Ковалёва</div><div style="color: #71717c;">HRD, производственная компания</div></div>
+                                </div>
+                                <p>«Работали с Bureau of Talents по закрытию двух сложных позиций. Отношение — партнёрское, не "отзвонились-отписались". Слышат реальный запрос, дают кандидатов, которые действительно усиливают. Спасибо за системность и честность».</p>
+                            </div>
+                        </div>
+                        <div class="review-slide">
+                            <div style="background: white; border-radius: 32px; padding: 40px; border: 1px solid #e8e5df;">
+                                <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 24px;">
+                                    <div style="width: 60px; height: 60px; background: #7E94BF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">МД</div>
+                                    <div><div style="font-weight: 700; font-size: 1.2rem;">Михаил Дорофеев</div><div style="color: #71717c;">CEO, IT-компания</div></div>
+                                </div>
+                                <p>«HR-аудит от Bureau of Talents открыл нам глаза на системные ошибки в найме. Внедрили рекомендации — текучка сократилась вдвое. Очень довольны, рекомендуем».</p>
+                            </div>
+                        </div>
+                        <div class="review-slide">
+                            <div style="background: white; border-radius: 32px; padding: 40px; border: 1px solid #e8e5df;">
+                                <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 24px;">
+                                    <div style="width: 60px; height: 60px; background: #7E94BF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">ЕП</div>
+                                    <div><div style="font-weight: 700; font-size: 1.2rem;">Екатерина Павлова</div><div style="color: #71717c;">Руководитель отдела персонала, ритейл</div></div>
+                                </div>
+                                <p>«Консультация помогла пересобрать воронку найма. Точечные правки дали +40% закрытых вакансий. Бюро Талантов — про экспертность и результат».</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next">→</button>
+                <div class="dots-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond"></span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- FAQ -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-centered">
+                <div class="faq-item">
+                    <div class="faq-question"><span>Сколько времени занимает закрытие вакансии?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">В среднем 10–14 дней по снайпингу. По сложным, уникальным позициям от 1,5 месяцев до 3 месяцев (зависит от редкости навыков и географии). Работаем на результат, а не на скорость любой ценой. На брифе честно проговариваем все риски и предлагаем стратегию, которая ускорит процесс без потери качества.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Какая гарантия на подбор?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Даём гарантию 3 месяца. Если кандидат не проходит испытательный срок — заменяем бесплатно.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Сколько стоит консультация?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Стоимость зависит от формата и глубины. Разовое погружение — от 25 000 ₽. При заказе аудита или снайпинга консультация может быть включена в пакет.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Работаете только с крупным бизнесом?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Нет. Помогаем бизнесу любого масштаба — от стартапов до федеральных компаний. Важен не размер, а сложность и ценность задачи.</div>
+                </div>
+                <!-- НОВЫЙ ВОПРОС -->
+                <div class="faq-item">
+                    <div class="faq-question"><span>Вы работаете с наймом "под ключ" или только консультируете?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">И то, и другое. Закрываем вакансию полностью (от профиля до оффера) или усиливаем ваш отдел персонала как внешние эксперты.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider-dots">
+        <span class="dot-divider"></span>
+        <span class="dot-divider"></span>
+        <span class="dot-divider"></span>
+    </div>
+
+    <!-- Форма связи -->
+    <section id="contact-form" class="bg-form">
+        <div class="container">
+            <h2 class="section-title">Обсудим ваш проект</h2>
+            <div class="form-centered">
+                <form id="callbackForm" action="send.php" method="POST">
+    <div class="form-group"><input type="text" placeholder="Ваше имя" name="name" required></div>
+    <div class="form-group"><input type="email" placeholder="E-mail" name="email" required></div>
+    <div class="form-group"><input type="tel" placeholder="Телефон" name="phone"></div>
+    <div class="form-group"><textarea rows="4" placeholder="Расскажите о задаче или вопросе..." name="message"></textarea></div>
+    <div class="form-group checkbox-group">
+        <label class="checkbox-label">
+            <input type="checkbox" name="consent" id="callbackConsent" required>
+            <span>Я соглашаюсь на обработку персональных данных и ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a></span>
+        </label>
+    </div>
+    <button type="submit" class="btn-primary" style="width: 100%;">Отправить заявку</button>
+</form>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond"></span>
+        <span class="divider-line"></span>
+    </div>
+<section class="trust-section">
+
+    <div class="container">
+
+        <span class="trust-label">
+            HR • Executive Search • Консалтинг
+        </span>
+
+        <h2>
+            Подбираем не сотрудников.
+            Собираем команды, которые двигают бизнес вперёд.
+        </h2>
+
+        <p>
+            Работаем там, где цена ошибки в найме слишком высока.
+        </p>
+
+    </div>
+
+</section>
+    <!-- Контакты -->
+    <section id="contacts" class="bg-contacts">
+    <div class="container">
+
+        <span class="contacts-label">
+            Контакты
+        </span>
+
+        <h2 class="section-title">
+            Обсудим вашу задачу
+        </h2>
+
+        <p class="contacts-subtitle">
+            Выберите удобный способ связи. Ответим на вопросы,
+            обсудим задачу и предложим решение.
+        </p>
+
+        <div class="contacts-grid">
+
+            <a href="https://t.me/bureau_of_talents" target="_blank" class="contact-card">
+                <i class="fab fa-telegram-plane"></i>
+                <span>Telegram</span>
+            </a>
+
+            <a href="https://m.tenchat.ru/u/ZtsTrdnd" target="_blank" class="contact-card">
+                <i class="fas fa-briefcase"></i>
+                <span>TenChat</span>
+            </a>
+
+            <a href="mailto:vi.cattleya25@gmail.com" class="contact-card">
+                <i class="far fa-envelope"></i>
+                <span>E-mail</span>
+            </a>
+
+            <a href="tel:+79031960903" class="contact-card">
+                <i class="fas fa-phone"></i>
+                <span>Телефон</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="premium-footer">
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <h3>Bureau of Talents</h3>
+                <p>
+                    Executive Search, HR-аудит и HR-консалтинг
+                    для компаний, которым нужны сильные команды.
+                </p>
+            </div>
+<div class="footer-links-wrapper">
+     <h4>Разделы сайта</h4>
+            <div class="footer-links">
+                <a href="#about">О нас</a>
+                <a href="#contacts">Контакты</a>
+                <a href="#services">Услуги</a>
+            </div>
+</div>
+        </div>
+
+        <div class="footer-bottom">
+
+    <span>
+        © 2025 Bureau of Talents
+    </span>
+
+    <span>
+        Executive Search • HR Audit • HR Consulting
+    </span>
+
+    <a href="privacy-policy.html" class="footer-privacy">Политика конфиденциальности</a>
+
+</div>
+
+    </div>
+</footer>
+
+<div class="modal-overlay" id="guideModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeGuideModal()">✕</button>
+        <span class="modal-icon">🎁</span>
+        <h3>«Как написать вакансию, которая нанимает без вас»</h3>
+        <p>Заполните форму, чтобы получить гайд</p>
+        <form id="guideFormModal" action="send.php" method="POST">
+            <input type="hidden" name="guide" value="1">
+            <div class="form-group"><input type="text" placeholder="Ваше имя" name="name" required></div>
+            <div class="form-group"><input type="email" placeholder="E-mail" name="email" required></div>
+            <div class="form-group"><input type="tel" placeholder="Телефон" name="phone"></div>
+            <div class="form-group"><input type="text" placeholder="Компания" name="company" required></div>
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="consent" required>
+                    <span>Я соглашаюсь на обработку персональных данных и ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a></span>
+                </label>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%;">Забрать гайд →</button>
+        </form>
+        <div id="guideResult" style="display:none; margin-top: 20px; text-align: center;">
+            <p style="color: var(--accent);">✅ Гайд доступен для скачивания: <a href="/assets/guide.pdf" target="_blank" style="font-weight: bold; text-decoration: underline;">Скачать PDF</a></p>
+            <p style="font-size: 0.9rem; margin-top: 8px;">Скоро с вами свяжется наш специалист, для ответа на вопросы и консультации.</p>
+        </div>
+    </div>
+</div>
+
+<div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-content">
+        <p>Мы используем файлы cookie, чтобы вам было удобнее. Продолжая использовать сайт, вы соглашаетесь на их обработку.</p>
+        <button class="btn-primary cookie-btn" id="cookieAccept">Принять</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

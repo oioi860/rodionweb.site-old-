@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>I-FOODS — десерты нового поколения</title>
+    <meta
+      name="description"
+      content="I-FOODS — зефир в шоколаде, пирожные, чоколит и наборы на каждый день: десерты, которые хочется выбрать с первого взгляда."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body data-page="storefront">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="I-FOODS — на главную">
+          <img class="brand-logo" src="./изображения/ifoods-logo-site.png" alt="I-FOODS Innovation &amp; Health" />
+        </a>
+
+        <nav class="site-nav" aria-label="Главная навигация">
+          <a href="#catalog">Каталог</a>
+          <a href="#lineup">Линейка</a>
+          <a href="#collections">Наборы</a>
+          <a href="#highlights">Хиты</a>
+          <a href="#about">О бренде</a>
+          <a href="#delivery">Доставка и оплата</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="header-link" href="../index.html">← К портфолио</a>
+          <a class="header-link" href="#collections">Наборы</a>
+          <button class="cart-pill" id="cartPill" type="button" aria-live="polite">
+            Корзина
+            <span id="cartCount">0</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="top">
+          <div class="hero-noise" aria-hidden="true"></div>
+          <div class="hero-inner">
+            <div class="hero-copy" data-reveal>
+              <p class="eyebrow">Десерты I-FOODS</p>
+              <h1>
+                <span id="heroTopTitle">Десерты нового поколения</span>
+                <span id="heroTopSubtitle">Зефир, пирожные и наборы для дома, к чаю и в подарок</span>
+              </h1>
+              <p class="hero-text" id="heroTopText">
+                Зефир, пирожные, чоколит и наборы для дома, к чаю и в подарок.
+              </p>
+
+              <div class="hero-actions">
+                <a class="button button-primary" href="#catalog">Открыть каталог</a>
+                <a class="button button-secondary" href="#spotlight">Выбрать десерты</a>
+              </div>
+
+              <ul class="proof-row" id="proofRow">
+                <li>
+                  <strong id="totalProducts">37</strong>
+                  <span>десертов в первой коллекции</span>
+                </li>
+                <li>
+                  <strong id="totalCategories">4</strong>
+                  <span>линеек на любой вкус</span>
+                </li>
+                <li>
+                  <strong>Порционно</strong>
+                  <span>удобно брать домой, в офис и в гости</span>
+                </li>
+                <li>
+                  <strong>Наборы</strong>
+                  <span>удобно собрать к чаю или в подарок</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hero-showcase" data-reveal>
+              <div class="hero-stage" id="heroStage">
+                <div class="hero-stage-copy">
+                  <span class="hero-stage-label" id="heroStageLabel">I-FOODS</span>
+                  <strong id="heroStageTitle">Десерты, которые хочется выбрать сразу</strong>
+                  <span id="heroStageSummary">Знакомые вкусы, аккуратная подача и десерты для себя, дома и в подарок.</span>
+                </div>
+
+                <div class="hero-media is-video" id="heroMedia">
+                  <video
+                    id="heroVideo"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster="./Видео/IMG_8089-poster.jpg"
+                    aria-label="Видео-ролик I-FOODS"
+                  >
+                    <source src="./Видео/IMG_8089.mp4" type="video/mp4" />
+                  </video>
+                </div>
+
+                <div class="hero-stage-note">
+                  <span>Первое знакомство</span>
+                  <p>Ниже уже ждут зефир, пирожные и чоколайт.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section spotlight-section" id="spotlight" data-reveal>
+            <div class="section-head">
+              <div>
+              <p class="section-kicker">Рекомендуем начать с этого</p>
+              <h2>Десерт, с которого удобно начать</h2>
+              </div>
+            <a class="section-link" href="#catalog">Весь каталог</a>
+          </div>
+          <div class="featured-panel" id="featuredPanel" aria-live="polite"></div>
+        </section>
+
+        <section class="section lineup-section" id="lineup" data-reveal>
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Линейка</p>
+              <h2>Свежие позиции для первого знакомства</h2>
+            </div>
+            <a class="section-link" href="#catalog">Весь каталог</a>
+          </div>
+          <div class="product-grid" id="lineupGrid"></div>
+        </section>
+
+        <div class="story-moment-slot" data-story-slot="after-lineup" hidden></div>
+
+        <section class="section highlights-section" id="highlights" data-reveal>
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Хиты продаж</p>
+              <h2>С них чаще всего начинается знакомство</h2>
+            </div>
+            <a class="section-link" href="#catalog" id="showHitsInCatalog">Весь каталог</a>
+          </div>
+          <div class="product-grid" id="hitsGrid"></div>
+        </section>
+
+        <div class="story-moment-slot" data-story-slot="after-highlights" hidden></div>
+
+        <section class="section collections-section" id="collections" data-reveal hidden>
+          <div class="bundles-stack" id="bundlesRoot" aria-live="polite"></div>
+        </section>
+
+        <section class="section catalog-section" id="catalog" data-reveal>
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Каталог</p>
+              <h2>Выбирайте десерты по вкусу, формату и настроению</h2>
+            </div>
+            <div class="catalog-meta" id="catalogMeta"></div>
+          </div>
+
+          <div class="filter-row" id="filterBar" aria-label="Фильтры каталога"></div>
+          <div class="product-grid" id="productsGrid"></div>
+
+          <div class="catalog-actions">
+            <button class="button button-secondary" id="loadMoreButton" type="button">
+              Показать ещё
+            </button>
+          </div>
+        </section>
+
+        <section class="section cart-section" id="cart" data-reveal>
+          <div class="cart-shell">
+            <div class="section-head cart-head">
+              <div>
+                <p class="section-kicker">Корзина</p>
+                <h2>Всё, что вы выбрали</h2>
+              </div>
+              <div class="cart-head-actions">
+                <div class="cart-meta" id="cartMeta">0 позиций</div>
+                <button class="button-tertiary cart-clear-button" id="clearCartButton" type="button">
+                  Очистить всё
+                </button>
+              </div>
+            </div>
+
+            <div class="cart-list" id="cartList" aria-live="polite"></div>
+
+            <div class="cart-summary">
+              <div class="cart-total-stack">
+                <div class="cart-total-row">
+                  <span>Товары</span>
+                  <strong id="cartSubtotal">0 ₽</strong>
+                </div>
+                <div class="cart-total-row">
+                  <span id="cartDeliveryLabel">Доставка</span>
+                  <strong id="cartDelivery">Выберите способ получения</strong>
+                </div>
+                <div class="cart-total-row cart-total-row-grand">
+                  <span>Итого</span>
+                  <strong id="cartTotal">0 ₽</strong>
+                </div>
+                <p class="cart-summary-note" id="cartSummaryNote">
+                  Способ получения и оплату выберете на следующем шаге.
+                </p>
+              </div>
+              <button class="button button-primary" id="checkoutButton" type="button">
+                Оформить заказ
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section checkout-section" id="checkout" data-reveal>
+          <div class="checkout-shell">
+            <div class="section-head checkout-head">
+              <div>
+                <p class="section-kicker">Оформление</p>
+                <h2>Контакты, доставка и подтверждение заказа</h2>
+              </div>
+              <div class="checkout-status" id="checkoutStatus" aria-live="polite"></div>
+            </div>
+            <div id="checkoutRoot"></div>
+          </div>
+        </section>
+
+        <div class="story-moment-slot" data-story-slot="before-about" hidden></div>
+
+        <section class="section about-section" id="about" data-reveal>
+          <div class="about-grid">
+            <div class="about-copy">
+              <p class="section-kicker" id="aboutKicker">Почему I-FOODS</p>
+              <h2 id="aboutTitle">Десерты нового поколения, которые выглядят по-настоящему аппетитно</h2>
+              <p id="aboutLead">
+                I-FOODS — это не про ограничения, а про удовольствие: знакомые
+                вкусы, аккуратная подача и коллекция, в которой легко найти
+                десерт для себя или в подарок.
+              </p>
+
+              <div class="principles-grid" id="aboutPrinciplesGrid"></div>
+            </div>
+
+            <div class="about-media">
+              <div class="about-glow"></div>
+              <div class="media-stack">
+                <img
+                  class="media-stack-main"
+                  id="aboutImageMain"
+                  src="./изображения/ifoods-social-raspberry-velvet-square.jpg"
+                  alt="Малиновый бархат"
+                />
+                <img
+                  class="media-stack-secondary"
+                  id="aboutImageSecondary"
+                  src="./изображения/ifoods-pack-zefir-brownie-chocolate-glaze-front.jpg"
+                  alt="Зефир в шоколаде"
+                />
+                <img
+                  class="media-stack-tertiary"
+                  id="aboutImageTertiary"
+                  src="./изображения/ifoods-social-chocolate-velvet-square.jpg"
+                  alt="Шоколадный бархат"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ops-section" id="delivery" data-reveal>
+          <div class="delivery-shell">
+            <div class="section-head delivery-head">
+              <div>
+                <p class="section-kicker">Доставка и оплата</p>
+                <h2>Понятные условия доставки, оплаты и самовывоза</h2>
+              </div>
+              <a class="button button-secondary" href="#checkout">Перейти к оформлению</a>
+            </div>
+            <div id="deliveryRoot"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <div class="brand brand-footer">
+            <img class="brand-logo" src="./изображения/ifoods-logo-site.png" alt="I-FOODS Innovation &amp; Health" />
+          </div>
+          <p class="footer-note">
+            I-FOODS — десерты на каждый день и для особого случая: вкусно, аккуратно и без лишнего шума.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#catalog">Каталог</a>
+          <a href="#highlights">Хиты</a>
+          <a href="#delivery">Доставка и оплата</a>
+          <a href="#about">О бренде</a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>

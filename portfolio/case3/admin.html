@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>I-FOODS — управление витриной</title>
+    <meta
+      name="description"
+      content="Страница I-FOODS для редактирования карточек, фото и разделов витрины."
+    />
+    <style>
+      body[data-page="admin"].admin-locked #adminAppMount {
+        display: none !important;
+      }
+
+      body[data-page="admin"]:not(.is-admin-authenticated) #adminLoginGate {
+        display: grid !important;
+      }
+
+      body[data-page="admin"].is-admin-authenticated #adminLoginGate {
+        display: none !important;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="admin" class="admin-locked">
+    <section class="admin-login-gate" id="adminLoginGate">
+      <div class="admin-login-card">
+        <div class="admin-login-header">
+          <div class="admin-login-brand">
+            <img class="brand-logo" src="./изображения/ifoods-logo-site.png" alt="I-FOODS Innovation &amp; Health" />
+          </div>
+          <p class="admin-login-kicker">Вход для администратора</p>
+          <h1>Управление витриной</h1>
+          <p class="admin-login-lead">
+            Войдите, чтобы редактировать карточки, фото и разделы витрины.
+          </p>
+        </div>
+
+        <div class="admin-login-body">
+          <form class="admin-login-form" id="adminLoginForm">
+            <label class="admin-login-field">
+              <span class="admin-login-label">Почта</span>
+              <input
+                type="email"
+                name="email"
+                autocomplete="username"
+                placeholder="you@example.com"
+                required
+              />
+            </label>
+
+            <label class="admin-login-field">
+              <span class="admin-login-label">Пароль</span>
+              <input
+                type="password"
+                name="password"
+                autocomplete="current-password"
+                placeholder="••••••••"
+                required
+              />
+            </label>
+
+            <p class="admin-login-error" id="adminLoginError" aria-live="polite"></p>
+
+            <button class="button button-primary admin-login-submit" type="submit">Войти</button>
+          </form>
+
+          <div class="admin-login-footer">
+            <a class="admin-login-back" href="./index.html">← Вернуться на витрину</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="adminAppMount"></div>
+
+    <template id="adminAppTemplate">
+      <div class="site-shell" id="adminAppShell">
+        <header class="site-header">
+          <a class="brand" href="./index.html" aria-label="I-FOODS — к витрине">
+            <img class="brand-logo" src="./изображения/ifoods-logo-site.png" alt="I-FOODS Innovation &amp; Health" />
+          </a>
+
+          <nav class="site-nav" id="siteNav" aria-label="Навигация по странице">
+            <a href="./index.html">К витрине</a>
+            <a href="#admin">Карточки</a>
+            <a href="#adminGuide">Как работать</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="header-link" href="./index.html#catalog">Открыть витрину</a>
+            <button class="button button-secondary admin-logout-button" id="adminLogoutButton" type="button">
+              Выйти
+            </button>
+          </div>
+        </header>
+
+        <main class="admin-page-main">
+          <section class="section admin-page-intro" data-reveal>
+            <div class="admin-page-grid">
+              <div class="admin-page-copy">
+                <p class="section-kicker">Управление</p>
+                <h1>Карточки, фото и разделы витрины</h1>
+                <p>
+                  Здесь можно добавить товар, поправить карточку и сразу увидеть,
+                  как всё выглядит в каталоге.
+                </p>
+                <div class="admin-page-actions">
+                  <a class="button button-primary" href="#admin">Открыть редактор</a>
+                  <a class="button button-secondary" href="./index.html">Вернуться на витрину</a>
+                </div>
+              </div>
+
+              <aside class="admin-page-note">
+                <strong>Важно</strong>
+                <p>
+                  Изменения сохраняются на сервере и сразу видны всем посетителям сайта.
+                  После правок нажмите «Сохранить изменения».
+                </p>
+              </aside>
+            </div>
+          </section>
+
+          <section class="section admin-section" id="admin" data-reveal>
+            <div class="admin-shell">
+              <div class="section-head admin-head">
+                <div>
+                  <p class="section-kicker">Редактор</p>
+                  <h2>Карточки и места показа</h2>
+                </div>
+                <div class="admin-status" id="adminStatus" aria-live="polite"></div>
+              </div>
+
+              <nav class="admin-tabs" id="adminTabs" aria-label="Разделы редактора">
+                <button class="admin-tab is-active" type="button" data-admin-tab="products" aria-selected="true">
+                  Товары
+                </button>
+                <button class="admin-tab" type="button" data-admin-tab="categories" aria-selected="false">
+                  Категории
+                </button>
+                <button class="admin-tab" type="button" data-admin-tab="bundles" aria-selected="false">
+                  Наборы
+                </button>
+                <button class="admin-tab" type="button" data-admin-tab="hero" aria-selected="false">
+                  Главный экран
+                </button>
+                <button class="admin-tab" type="button" data-admin-tab="moments" aria-selected="false">
+                  Видео-блоки
+                </button>
+                <button class="admin-tab" type="button" data-admin-tab="about" aria-selected="false">
+                  О бренде
+                </button>
+              </nav>
+
+              <div class="admin-panels">
+                <div id="adminProductsPanel" class="admin-tab-panel is-active"></div>
+                <div id="adminCategoriesPanel" class="admin-tab-panel" hidden></div>
+                <div id="adminBundlesPanel" class="admin-tab-panel" hidden></div>
+                <div id="adminHeroPanel" class="admin-tab-panel" hidden></div>
+                <div id="adminMomentsPanel" class="admin-tab-panel" hidden></div>
+                <div id="adminAboutPanel" class="admin-tab-panel" hidden></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section admin-guide-section" id="adminGuide" data-reveal>
+            <div class="delivery-shell">
+              <div class="section-head delivery-head">
+                <div>
+                  <p class="section-kicker">Памятка</p>
+                  <h2>Что можно менять</h2>
+                </div>
+              </div>
+              <div class="delivery-grid">
+                <article class="delivery-card">
+                  <h3>Товары</h3>
+                  <p>Карточки, фото, цены и флаги показа: витрина, линейка, хиты, наборы.</p>
+                </article>
+                <article class="delivery-card">
+                  <h3>Категории</h3>
+                  <p>Названия линеек, описания, фото и порядок в блоке «Линейки».</p>
+                </article>
+                <article class="delivery-card">
+                  <h3>Главный экран</h3>
+                  <p>Заголовки и видео в первом блоке страницы.</p>
+                </article>
+                <article class="delivery-card">
+                  <h3>Видео-блоки</h3>
+                  <p>Сюжетные ролики между разделами: подписи, видео и ссылки в стиле главного экрана.</p>
+                </article>
+                <article class="delivery-card">
+                  <h3>О бренде</h3>
+                  <p>Блок «Почему I-FOODS»: заголовки, четыре принципа и три фото справа.</p>
+                </article>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <div>
+            <div class="brand brand-footer">
+              <img class="brand-logo" src="./изображения/ifoods-logo-site.png" alt="I-FOODS Innovation &amp; Health" />
+            </div>
+            <p class="footer-note">
+              Здесь вы настраиваете витрину. Сам сайт с товарами открыт на основной странице.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <a href="./index.html">Витрина</a>
+            <a href="#admin">Карточки</a>
+            <a href="#adminGuide">Памятка</a>
+          </div>
+        </footer>
+      </div>
+    </template>
+
+    <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="./auth.js"></script>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

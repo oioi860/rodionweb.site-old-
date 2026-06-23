@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin.html
+Disallow: /auth.js
+Disallow: /api/
+Disallow: /data/

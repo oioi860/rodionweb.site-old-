@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,"script","https://mc.yandex.ru/metrika/tag.js?id=108149074", "ym");
+    ym(108149074, "init", {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Статья | Родион Чавдар</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108149074" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Родион Чавдар</a>
+      <nav class="nav">
+        <a href="portfolio/index.html">Портфолио</a>
+        <a href="blog.html">Блог</a>
+        <a href="about.html">Обо мне</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="btn btn-accent" href="contacts.html#contactForm">Оставить заявку</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <a href="blog.html" class="back-to-blog">← Все статьи</a>
+        <article class="blog-post" id="post-content">
+          <div class="blog-spinner-wrapper">
+            <div class="blog-spinner"></div>
+            <p class="muted">Загружаю статью...</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-block footer-center">
+      <div class="footer-title">Родион Чавдар — веб-разработчик</div>
+      <p class="muted">Открыт к новым проектам и партнерствам.<br>Связаться можно в <a href="https://t.me/RodionChavdar" target="_blank">Telegram</a>, по почте <a href="mailto:860.ilcoffee@gmail.com">860.ilcoffee@gmail.com</a> или по телефону <a href="tel:+79094182866">+7 909 418 28 66</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/markdown-utils.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const container = document.getElementById('post-content');
+      const urlParams = new URLSearchParams(window.location.search);
+      const postName = urlParams.get('post');
+
+      if (!postName) {
+        container.innerHTML = '<div class="blog-error"><h2>Статья не указана</h2><a href="blog.html" class="btn btn-ghost">Вернуться к списку</a></div>';
+        return;
+      }
+
+      try {
+        const post = await loadSinglePost(postName);
+        if (!post) throw new Error('Статья не найдена');
+
+        document.title = post.title + ' | Родион Чавдар';
+        
+        const formattedDate = post.date ? new Date(post.date).toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Без даты';
+        
+        container.innerHTML = `
+          <h1>${post.title}</h1>
+          <div class="blog-post-meta">
+            <span class="meta-chip">📅 ${formattedDate}</span>
+            ${post.readTime ? `<span class="meta-chip">⏱️ ${post.readTime} мин</span>` : ''}
+          </div>
+          <div class="blog-post-content">${parseMarkdown(post.content)}</div>
+        `;
+      } catch (error) {
+        container.innerHTML = `<div class="blog-error"><h2>Ошибка загрузки</h2><p>${error.message}</p><a href="blog.html" class="btn btn-ghost">Вернуться к списку</a></div>`;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,"script","https://mc.yandex.ru/metrika/tag.js?id=108149074", "ym");
+    ym(108149074, "init", {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>Контакты | Родион Чавдар</title>
+  <meta name="description" content="Свяжитесь с Родионом Чавдаром: Telegram, почта, телефон и форма заявки.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108149074" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Родион Чавдар</a>
+      <nav class="nav">
+        <a href="portfolio/index.html">Портфолио</a>
+        <a href="blog.html">Блог</a>
+        <a href="about.html">Обо мне</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="btn btn-accent" href="#contactForm">Оставить заявку</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h1>Контакты</h1>
+          <p class="muted">Выберите удобный способ связи.</p>
+        </div>
+
+        <div class="grid projects-grid">
+          <article class="card project-card reveal">
+            <div class="card-body">
+              <h3>Telegram</h3>
+              <p>Быстрый способ связи и обсуждения задач.</p>
+              <a class="card-link" href="https://t.me/RodionChavdar" target="_blank">@RodionChavdar →</a>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="card-body">
+              <h3>Почта</h3>
+              <p>Для подробных запросов и ТЗ.</p>
+              <a class="card-link" href="mailto:860.ilcoffee@gmail.com">860.ilcoffee@gmail.com →</a>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="card-body">
+              <h3>Звонки</h3>
+              <p>В MAX меня можно найти по этому номеру.</p>
+              <a class="card-link" href="tel:+79094182866">+7 909 418 28 66 →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-head reveal" style="margin-top: 48px;">
+          <h2>Короткая заявка</h2>
+          <p class="muted">Опишите задачу, и я вернусь с вопросами и оценкой сроков.</p>
+        </div>
+
+        <!-- Форма отправляется на FormSubmit (без JS, гарантированно работает) -->
+        <form id="contactForm" class="contact-form reveal" action="https://formsubmit.co/el/xixife" method="POST" data-telegram-token="8533172865:AAF9eC5-V0M29r0ejPyswMpTUW9QXp3PuEI" data-telegram-chat="614419745">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="Новая заявка с сайта">
+          
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Имя</span>
+              <input type="text" name="name" placeholder="Как к вам обращаться" required>
+            </label>
+            <label class="form-field">
+              <span>Контакт для связи</span>
+              <input type="text" name="contact" placeholder="Telegram / телефон / email" required>
+            </label>
+          </div>
+          
+          <label class="form-field">
+            <span>Задача</span>
+            <textarea name="message" rows="5" placeholder="Коротко опишите проект, сроки и желаемый результат" required></textarea>
+          </label>
+          
+          <label class="form-consent">
+            <input type="checkbox" name="consent" required>
+            <span>Я даю согласие на обработку персональных данных и принимаю условия <a href="privacy.html" target="_blank">политики конфиденциальности</a>.</span>
+          </label>
+          
+          <button class="btn" type="submit">Отправить заявку</button>
+          <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-block footer-center">
+      <div class="footer-title">Родион Чавдар — веб-разработчик</div>
+      <p class="muted">Открыт к новым проектам и партнерствам.<br>Связаться можно в <a href="https://t.me/RodionChavdar" target="_blank">Telegram</a>, по почте <a href="mailto:860.ilcoffee@gmail.com">860.ilcoffee@gmail.com</a> или по телефону <a href="tel:+79094182866">+7 909 418 28 66</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
